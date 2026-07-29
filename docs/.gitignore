@@ -1,0 +1,4 @@
+# Nothing is ignored here: your generated dashboard is COMMITTED — GitHub
+# Pages serves it straight from the repo, and make_manifest.py rebuilds,
+# commits, and pushes it for you. (Never edit files under docs/ by hand;
+# you author your work in weekN/.)

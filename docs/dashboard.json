@@ -1,0 +1,12 @@
+{
+  "title": "COMP 665 Data Visualization Portfolio",
+  "weeks": [
+    {
+      "development_report": true,
+      "page": "week2/",
+      "plots": [],
+      "project_title": "Histograms of binomial distributions",
+      "week": 2
+    }
+  ]
+}

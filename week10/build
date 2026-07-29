@@ -1,0 +1,15 @@
+touch project10_solution.py && rm project10_solution.py
+
+printf "Grading project10\n"
+
+jupyter-nbconvert --to python project10_solution.ipynb \
+  --PythonExporter.exclude_markdown=True \
+  --TagRemovePreprocessor.remove_cell_tags notebook_only \
+  > /dev/null 2> /dev/null
+
+printf "\nUsing student version of project10_checker.py for testing\n\n"
+export PYTHONPATH="$(pwd)" # Required for container architecture 
+python3.10 project10_checker.py
+
+printf "\n\nUsing student version for style checking\n"
+python3.10 ../public/style_checker.py project10_solution.py

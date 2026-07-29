@@ -1,0 +1,36 @@
+{
+  "name": "COMP 665 (frozen Python 3.10)",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+  },
+  "forwardPorts": [8888, 8000],
+  "portsAttributes": {
+    "8888": {
+      "label": "Jupyter",
+      "onAutoForward": "silent"
+    },
+    "8000": {
+      "label": "Dashboard preview",
+      "onAutoForward": "silent"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "jupyter.kernels.excludePythonEnvironments": ["/usr/bin/python3"],
+        "github.copilot.chat.codeGeneration.useInstructionFiles": true
+      }
+    }
+  },
+  "postStartCommand": "bash ${containerWorkspaceFolder}/.devcontainer/on_start.sh"
+}

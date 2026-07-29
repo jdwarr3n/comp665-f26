@@ -1,0 +1,15 @@
+touch project8_solution.py && rm project8_solution.py
+
+printf "Grading project8\n"
+
+jupyter-nbconvert --to python project8_solution.ipynb \
+  --PythonExporter.exclude_markdown=True \
+  --TagRemovePreprocessor.remove_cell_tags notebook_only \
+  > /dev/null 2> /dev/null
+
+printf "\nUsing student version of project8_checker.py for testing\n\n"
+export PYTHONPATH="$(pwd)" # Required for container architecture 
+python3.10 project8_checker.py
+
+printf "\n\nUsing student version for style checking\n"
+python3.10 ../public/style_checker.py project8_solution.py

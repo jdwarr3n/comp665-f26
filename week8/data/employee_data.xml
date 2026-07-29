@@ -1,0 +1,22 @@
+
+<data>
+
+	<employee
+		id="E0172"
+		first="Joe"
+		last="Warren"
+		title="Professor" />
+
+	<employee
+		id="E0202"
+		first="John"
+		last="Greiner"
+		title="Professor" />
+
+	<employee
+		id="E0001"
+		first="Scott"
+		last="Rixner"
+		title="God Emperor" />
+	
+</data>
