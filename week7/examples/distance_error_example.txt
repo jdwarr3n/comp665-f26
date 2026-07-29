@@ -1,0 +1,23 @@
+Consider a graph with three nodes labelled "a", "b", "c" and two edges ("a", "b") and ("a", "c").  If this graph has the layout {"a" : (0, 0), "b" : (1, 0), "c" : (0, 1)}, the three possible pairs of nodes from the graph have the following geometric distances:
+
+("a", "b") ---> 1
+
+("a", "c") ---> 1
+
+("b", "c") ---> sqrt(2)
+
+This graph (with two edges) has shortest paths with lengths:
+
+("a", "b") ---> 1
+
+("a", "c") ---> 1
+
+("b", "c") ---> 2
+
+So, the distance error for this graph layout is the "sum of the squares of differences between the path lengths and the geometric distances between nodes" for all pairs of nodes in path_lengths:
+
+(1 - 1) ** 2 + (1 - 1) ** 2 + (2 - sqrt(2)) ** 2 = 0 + 0 + (6 - 4 * sqrt(2))
+
+Since sqrt(2) is approximately 1.41, distance error is approximately 6 - 4 * 1.41  = 0.36.
+
+Note that this is not an optimal distance layout since choosing the position of "c" to be (-1, 0) makes the distance error be 0 (which is minimal).  Geometrically, this can be interpreted as laying out this graph out such that the three nodes lie in a straight line with the two edges in the graph having geometric length one.

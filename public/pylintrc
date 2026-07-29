@@ -1,0 +1,35 @@
+# PyLint configuration file
+
+[MESSAGES CONTROL]
+# R0201 Method could be a function
+# R1703 Simplified-if-statement
+# R1705 No-else-return
+# W0141 Used builtin function
+# W0142 Used * or ** magic
+# W0201 Attribute defined outside of __init__
+# W0611 Unused import
+# W0613 Unused argument
+# C0200 Consider using enumerate
+# C0303 Trailing whitespace
+# C0304 Final newline missing
+# C0305 Trailing newlines
+# C0325 Superfluous parens
+# C1801 len(SEQUENCE) as condition
+# R0903 Too few public methods
+# E1111 Assigning to function call which doesn't return
+# C0414 Import alias does not rename original package
+# E1136 Value 'variable_name' is unsubscriptable
+
+# C0301 Line too long
+
+disable= R1703,R1705,W0201,W0611,W0613,C0200,C0303,C0304,C0305,C0325,C1801,R0903,E1111,C0414,E1136,C3001,R1728
+
+# W1514: "open without encoding” warnings."?
+
+[BASIC]
+good-names=_
+attr-rgx=_[a-z0-9_]{3,30}$
+
+[DESIGN]
+max-attributes=15
+max-args=6

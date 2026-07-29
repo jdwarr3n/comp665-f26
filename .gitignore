@@ -1,0 +1,26 @@
+# Jupyter
+.ipynb_checkpoints/
+Untitled*.ipynb
+
+# Python
+__pycache__/
+*.pyc
+
+# OS / editor junk
+desktop.ini
+Thumbs.db
+.DS_Store
+.idea/
+
+# Instructor-only material: stays on disk in comp665-dev, never ships
+# (the starter is cut from tracked files only)
+CLAUDE.md
+.claude/
+README-instructor.md
+
+*_manifest.md
+
+# extract_plots.py lives in comp665-private; local run copies stay untracked
+extract_plots.py
+week11/project10_solution.py
+week14/data/zipped_data/

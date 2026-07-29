@@ -1,0 +1,41 @@
+<h1>Week 2 — Development Report</h1>
+<blockquote>
+<p><strong>This is a sample report.</strong> It shows the kind of development report
+you will write each week: a short, honest account of how you and your
+AI agent produced the week's solution. Using the agent to help
+generate the report — including summarizing its own conversation —
+is fine. Reports are written in Markdown, a simple text format for
+documents like this one; if you haven't used Markdown before, ask
+the agent to write the report in Markdown and it will handle the
+formatting for you. This example shows development in Gemini chat
+and fixing one issue detected in the Codespace.</p>
+<p>Development reports should always be named <code>projectN_development.md</code>
+and saved in your <code>weekN/</code> directory. <code>preview_dashboard.sh</code>
+automatically converts them into HTML and saves them in <code>docs/</code> for
+display in your dashboard.</p>
+</blockquote>
+<h2>How the work went</h2>
+<p>Saved the project description as an HTML file and downloaded
+<code>project2_template.ipynb</code>, then attached both to a Gemini Pro chat and
+asked for one code block per function in the template. Pasted the
+blocks into <code>project2_solution.ipynb</code> in the Codespace and ran the
+notebook in Jupyter.</p>
+<p>The original Python code passed the week 2 machine grader on the first
+<code>./build</code> run. However, while reviewing the solution images, we noted
+that the histogram bins weren't centered at the integers as the project
+description requires — matplotlib's default style centers bins
+<em>between</em> the integers. Described the issue in the same Gemini
+conversation and let Gemini fix the code; it passed explicit bin edges
+offset by one half (<code>bins=[k - 0.5 for k in range(num_bins + 2)]</code>),
+which matched the description on the next run.</p>
+<p>Finished by re-running <code>./build</code> — the checker passed all tests and
+pylint reported no style issues.</p>
+<h2>Question answers</h2>
+<p>Project 2 has no required questions. When a project's template includes
+required questions, answer them at the end of your report in this
+format:</p>
+<ul>
+<li><strong>Question 1</strong> The histogram narrows relative to its mean as n grows
+  because the standard deviation grows as sqrt(n) while the mean grows
+  as n.</li>
+</ul>
