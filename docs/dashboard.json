@@ -4,7 +4,11 @@
     {
       "development_report": true,
       "page": "week2/",
-      "plots": [],
+      "plots": [
+        "plots/distribution_1.png",
+        "plots/distribution_2.png",
+        "plots/distribution_3.png"
+      ],
       "project_title": "Histograms of binomial distributions",
       "week": 2
     }
